@@ -18,7 +18,11 @@ Photoshop is a registered trademark of Adobe Corporation.
 from struct import pack
 
 import numpy
-import Image
+
+try:
+    import Image
+except ImportError:
+    from PIL import Image
 
 from . import Layer
 from . import utils

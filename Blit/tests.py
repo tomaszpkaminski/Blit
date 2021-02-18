@@ -4,7 +4,10 @@ Run as a module, like this:
     python -m Blit.tests
 """
 import unittest
-import Image
+try:
+    import Image
+except ImportError:
+    from PIL import Image
 
 from . import Bitmap, Color, Layer, blends, adjustments, utils, photoshop
 

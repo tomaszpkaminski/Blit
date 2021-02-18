@@ -1,5 +1,8 @@
 import numpy
-import Image
+try:
+    import Image
+except ImportError:
+    from PIL import Image
 
 def arr2img(ar):
     """ Convert Numeric array to PIL Image.
